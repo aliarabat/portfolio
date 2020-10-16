@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: rgb(46, 39, 39);
+  box-shadow: 0 5px 15px rgb(46, 39, 39, 0.5);
+  color: white;
+  z-index: 1;
+}
+header #main-logo {
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.1);
+}
+header #menu {
+  display: none;
+  background: transparent;
+  outline: none;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+header #menu img {
+  width: 2em;
+  vertical-align: middle;
+  filter: invert();
+}
+
+header #menu:hover {
+  background-color: white;
+}
+
+header #menu:hover img {
+  filter: grayscale(1);
+}
+
+header nav {
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  letter-spacing: 1px;
+  list-style: none;
+  height: 100%;
+}
+
+header nav ul li {
+  position: relative;
+  padding: 1em 0.5em;
+  cursor: pointer;
+}
+
+header nav ul li a {
+  padding: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+header nav ul li span {
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease;
+  background-color: white;
+}
+
+header nav ul li:hover span {
+  width: 100%;
+}
+
+main {
+  height: auto;
+  color: black;
+}
+
+main section {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+main section h2 {
+  font-size: 2.4em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(221, 226, 224);
+  background: radial-gradient(
+    circle,
+    rgba(221, 226, 224, 1) 0%,
+    rgba(201, 223, 214, 1) 45%,
+    rgba(194, 228, 213, 1) 100%
+  );
+}
+
+#welcome-section h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+}
+
+#welcome-section .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 12;
+}
+#welcome-section .content .main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#welcome-section .content .main a {
+  width: 3em;
+  height: 3em;
+  padding: 10px;
+  margin: 3px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+#welcome-section .content .main a:hover {
+  transform: rotate(360deg);
+  background-color: white;
+}
+
+#welcome-section .content .main a:active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.scrolldown {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+@keyframes slidetoggle {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 0.4em;
+  }
+}
+.scrolldown a {
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 15.2px;
+  border: 1px solid wheat;
+  border-radius: 50%;
+  outline-style: none;
+  cursor: pointer;
+  animation: slidetoggle 0.5s ease 0s infinite alternate-reverse backwards;
+}
+
+.scrolldown a:active {
+  color: aqua;
+}
+
+#aboutme-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgb(114, 193, 255);
+}
+
+#aboutme-section .content {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 100px;
+  flex-grow: 1;
+}
+
+#aboutme-section .content img {
+  align-self: center;
+  border: 1.5px dashed #000;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgb(46, 39, 39, 0.5);
+}
+
+#aboutme-section .content .vl {
+  border-left: 0.3px solid rgb(139, 137, 137);
+  height: 60%;
+  align-self: center;
+  margin: 0 10px;
+}
+
+#aboutme-section .content p {
+  align-self: center;
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+#academiccurriculum-section {
+  display: flex;
+  flex-direction: column;
+  background: rgb(221, 226, 224);
+  background: radial-gradient(
+    circle,
+    rgba(221, 226, 224, 1) 0%,
+    rgba(201, 223, 214, 1) 45%,
+    rgba(194, 228, 213, 1) 100%
+  );
+}
+
+#academiccurriculum-section .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* flex-grow: 1; */
+  color: #000;
+}
+
+#academiccurriculum-section .content .education-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 3em;
+  height: 3em;
+  margin: auto;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 0 1.75px 5px rgb(46, 39, 39, 0.2);
+}
+
+#academiccurriculum-section .content .education-logo img {
+  align-self: center;
+  max-width: 1.5em;
+  max-height: 1.5em;
+  filter: sepia(1);
+}
+
+#academiccurriculum-section .content .levels img {
+  width: 1.3em;
+  height: 1.3em;
+  /* filter: grayscale(1); */
+}
+
+#academiccurriculum-section .content .vl {
+  border-left: 1px dashed black;
+  width: 1px;
+  margin: auto;
+  height: 120px;
+}
+
+#academiccurriculum-section .content #master {
+  position: absolute;
+  width: 45%;
+  right: 0;
+}
+
+#academiccurriculum-section .content .levels:not(#bachelor) p img {
+  margin-right: 6px;
+}
+
+#academiccurriculum-section .content #bachelor p img {
+  margin-left: 6px;
+}
+
+#academiccurriculum-section .content #bachelor {
+  position: absolute;
+  width: 45%;
+  align-self: center;
+  left: 0;
+}
+
+#academiccurriculum-section .content #baccalaureate {
+  position: absolute;
+  width: 45%;
+  right: 0;
+  bottom: 0;
+}
+
+#academiccurriculum-section .content .levels p {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+#academiccurriculum-section .content .levels p:nth-child(2) {
+  margin: 5px 0;
+}
+
+#academiccurriculum-section .content .levels:not(#bachelor) p {
+  justify-content: flex-start;
+}
+
+#academiccurriculum-section .content #bachelor p {
+  justify-content: flex-end;
+}
+
+#projectsreleased-section {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    rgba(114, 193, 255, 1) 0%,
+    rgba(50, 165, 255, 1) 45%,
+    rgba(29, 154, 253, 1) 100%
+  );
+}
+
+#projectsreleased-section .content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#projectsreleased-section .content .card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flexbox;
+  flex-direction: column;
+  /* border-left: 5px solid black; */
+  box-shadow: 0 5px 15px rgb(46, 39, 39, 0.5);
+}
+
+#projectsreleased-section .content .card .card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+#projectsreleased-section .content .card .card-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#projectsreleased-section p {
+  font-size: 15px;
+}
+
+#projectsreleased-section .content .card .card-body p {
+  font-size: 22px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  color: white;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+}
+
+#projectsreleased-section .content .card .card-footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  overflow: hidden;
+  z-index: 1;
+  left: 5%;
+  bottom: 0;
+  height: 0;
+  transition: 0.5s ease;
+  color: white;
+}
+
+.card .card-footer img {
+  filter: invert();
+}
+
+#projectsreleased-section .content .card:hover .card-body p {
+  /* height: 100%;
+  background-color: black; */
+  height: 100%;
+  /* background-color: rgb(255, 68, 0); */
+  background-color: rgb(0, 0, 0);
+}
+
+#projectsreleased-section .content .card:hover .card-footer {
+  height: 50%;
+}
+
+#projectsreleased-section .content .card .card-footer .info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#projectsreleased-section .content .card .card-footer .info img {
+  margin-right: 5px;
+}
+
+#projectsreleased-section .content .card .card-footer .info p a {
+  text-decoration: none;
+  color: white;
+  font-size: inherit;
+}
+
+#skilledechnologies-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgb(221, 226, 224);
+  background: radial-gradient(
+    circle,
+    rgba(221, 226, 224, 1) 0%,
+    rgba(201, 223, 214, 1) 45%,
+    rgba(194, 228, 213, 1) 100%
+  );
+}
+
+#skilledechnologies-section .content {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#skilledechnologies-section .content .framework {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  width: 15vw;
+  height: 20vh;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  transition: 0.5s ease;
+}
+
+#skilledechnologies-section .content .framework img {
+  max-width: 5em;
+  max-height: 5em;
+}
+
+#skilledechnologies-section .content .framework p {
+  text-align: center;
+}
+
+.fit-width {
+  max-width: 6em;
+}
+
+#skilledechnologies-section .content .framework:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#scrolltotop {
+  display: flex;
+  position: fixed;
+  padding: 10px 20.2px;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: #000;
+  z-index: 10000;
+  border-radius: 50%;
+  transform: scale(0);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#scrolltotop.show {
+  transform: scale(1);
+}
+
+#scrolltotop p {
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  header nav {
+    display: none;
+  }
+
+  header * {
+    padding: 0;
+  }
+
+  header #menu {
+    display: inline;
+  }
+
+  @keyframes slide {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 50%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  header nav.show {
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: auto;
+    right: 0;
+    left: 0;
+    top: 10vh;
+    z-index: 100000;
+    /* animation-name: slide;
+    animation-duration: 300ms; */
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    letter-spacing: 1px;
+    list-style: none;
+    height: 100%;
+  }
+
+  header nav ul li {
+    /* padding: 1em 0.5em; */
+    align-self: center;
+  }
+
+  main section {
+    padding: 0 20px;
+  }
+
+  #welcome-section p {
+    font-size: 3em;
+  }
+
+  #aboutme-section .content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+  }
+
+  #aboutme-section .content .vl {
+    display: none;
+  }
+
+  #aboutme-section .content img {
+    /* width: 7em; */
+  }
+
+  #aboutme-section .content p {
+    font-size: 1em !important;
+  }
+
+  #academiccurriculum-section .content .education-logo img {
+    max-width: 1em;
+    max-height: 1em;
+  }
+
+  #academiccurriculum-section .content .education-logo {
+    width: 2em;
+    height: 2em;
+  }
+
+  #academiccurriculum-section .content .levels p {
+    font-size: .5em;
+  }
+
+  #projectsreleased-section .content .card {
+    width: 250px;
+    height: 250px;
+  }
+
+  #projectsreleased-section .card-body p {
+    font-size: 10px;
+  }
+
+  #projectsreleased-section .card-footer p {
+    font-size: 8px;
+  }
+
+  #skilledechnologies-section .content .framework img {
+    max-width: 2em;
+    max-height: 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main section h2 {
+    font-size: 1.5em;
+  }
+  #welcome-section p {
+    font-size: 2.2em;
+  }
+
+  #aboutme-section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  #aboutme-section .content p {
+    font-size: 0.7em !important;
+  }
+
+  #projectsreleased-section .content .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  #projectsreleased-section .content .card .card-body p {
+    font-size: 12px;
+  }
+
+  #projectsreleased-section .card-footer p {
+    font-size: 6px;
+  }
+
+  #skilledechnologies-section .content .framework p {
+    font-size: 0.6em;
+  }
+}
